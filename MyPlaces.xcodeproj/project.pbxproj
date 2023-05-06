@@ -15,6 +15,7 @@
 		D519002A2A02D45600F24455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D51900282A02D45600F24455 /* LaunchScreen.storyboard */; };
 		D51900322A02D4C200F24455 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51900312A02D4C200F24455 /* TableViewController.swift */; };
 		D532CADC2A06E84700B47387 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D532CADB2A06E84600B47387 /* CustomTableViewCell.swift */; };
+		D532CADE2A06F17B00B47387 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D532CADD2A06F17B00B47387 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D519002B2A02D45600F24455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D51900312A02D4C200F24455 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D532CADB2A06E84600B47387 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		D532CADD2A06F17B00B47387 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				D51900262A02D45600F24455 /* Assets.xcassets */,
 				D51900282A02D45600F24455 /* LaunchScreen.storyboard */,
 				D519002B2A02D45600F24455 /* Info.plist */,
+				D532CADD2A06F17B00B47387 /* Model.swift */,
 			);
 			path = MyPlaces;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				D51900222A02D45400F24455 /* ViewController.swift in Sources */,
 				D532CADC2A06E84700B47387 /* CustomTableViewCell.swift in Sources */,
 				D519001E2A02D45400F24455 /* AppDelegate.swift in Sources */,
+				D532CADE2A06F17B00B47387 /* Model.swift in Sources */,
 				D51900202A02D45400F24455 /* SceneDelegate.swift in Sources */,
 				D51900322A02D4C200F24455 /* TableViewController.swift in Sources */,
 			);
