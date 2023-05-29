@@ -13,7 +13,7 @@ class TableViewController: UITableViewController {
 
 //    let places = [Places(name: "Burger Heroes", location: "Kiev", type: "Cafe", image: "Burger Heroes")]
     
-    let places = Place.getPlaces()
+    var places = Place.getPlaces()
     
     
     
@@ -32,12 +32,22 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
+        
+        let place = places[indexPath.row]
 
 
-        cell.imageOfPlaceOU.image = UIImage(named: places[indexPath.row].image)
-        cell.nameLabelOU.text = places[indexPath.row].name
-        cell.locationLabelOU.text = places[indexPath.row].location
-        cell.typeLabelOU.text = places[indexPath.row].type
+        
+        cell.nameLabelOU.text = place.name
+        cell.locationLabelOU.text = place.location
+        cell.typeLabelOU.text = place.type
+        
+        if place.image == nil {
+            cell.imageOfPlaceOU.image = UIImage(named: place.restaurantImage!)
+        } else {
+            cell.imageOfPlaceOU.image = place.image
+        }
+        
+        
     
         
         cell.imageOfPlaceOU.layer.cornerRadius = cell.imageOfPlaceOU.frame.size.height / 2
@@ -68,7 +78,13 @@ class TableViewController: UITableViewController {
     }
     */
 
-    @IBAction func cancelAction(_ seque: UIStoryboardSegue){}
+    @IBAction func unwindSeque(_ seque: UIStoryboardSegue){
+        guard let newPlaceVC = seque.source as? NewPlacesTableViewController else { return }
+        
+        newPlaceVC.saveNewPlace()
+        places.append(newPlaceVC.newPlace!)
+        tableView.reloadData()
+    }
     
 
 }

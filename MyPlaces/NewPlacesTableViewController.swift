@@ -9,14 +9,25 @@ import UIKit
 
 class NewPlacesTableViewController: UITableViewController {
     
+    var newPlace: Place?
+    var imageIsChange = false
     
-    @IBOutlet weak var imageOfPlaces: UIImageView!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    @IBOutlet weak var placeName: UITextField!
+    @IBOutlet weak var placeLocation: UITextField!
+    @IBOutlet weak var placeImage: UIImageView!
+    @IBOutlet weak var placeType: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Скривает лишние полоски ячейки
         //tableView.tableFooterView = UIView()
+        saveButton.isEnabled = false
+        
+        placeName.addTarget(self, action: #selector(textFieldChange), for: .editingChanged)
+        
         
     }
     
@@ -54,7 +65,25 @@ class NewPlacesTableViewController: UITableViewController {
             view.endEditing(true)
         }
     }
-
+    
+    func saveNewPlace() {
+        
+        var image: UIImage?
+        
+        if imageIsChange {
+            image = placeImage.image
+        } else {
+            image = #imageLiteral(resourceName: "PlateIcon")
+        }
+        
+        newPlace = Place(name: placeName.text!, location: placeLocation.text, type: placeType.text ,image: image ,restaurantImage: nil)
+    }
+    
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     
 }
 
@@ -65,6 +94,14 @@ extension NewPlacesTableViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    @objc private func textFieldChange() {
+        if placeName.text?.isEmpty == false {
+            saveButton.isEnabled = true
+        } else {
+            saveButton.isEnabled = false
+        }
     }
     
     
@@ -84,9 +121,12 @@ extension NewPlacesTableViewController : UIImagePickerControllerDelegate, UINavi
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        imageOfPlaces.image = info[.editedImage] as? UIImage
-        imageOfPlaces.contentMode = .scaleToFill
-        imageOfPlaces.clipsToBounds = true
+        placeImage.image = info[.editedImage] as? UIImage
+        placeImage.contentMode = .scaleToFill
+        placeImage.clipsToBounds = true
+        
+        imageIsChange = true
+        
         dismiss(animated: true)
     }
     
