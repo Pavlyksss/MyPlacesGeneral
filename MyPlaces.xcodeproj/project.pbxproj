@@ -16,6 +16,7 @@
 		D51900322A02D4C200F24455 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51900312A02D4C200F24455 /* TableViewController.swift */; };
 		D532CADC2A06E84700B47387 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D532CADB2A06E84600B47387 /* CustomTableViewCell.swift */; };
 		D532CADE2A06F17B00B47387 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D532CADD2A06F17B00B47387 /* Model.swift */; };
+		D532CAE02A1E9C6E00B47387 /* NewPlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D532CADF2A1E9C6E00B47387 /* NewPlacesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D51900312A02D4C200F24455 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D532CADB2A06E84600B47387 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		D532CADD2A06F17B00B47387 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D532CADF2A1E9C6E00B47387 /* NewPlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlacesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				D519001D2A02D45400F24455 /* AppDelegate.swift */,
 				D532CADB2A06E84600B47387 /* CustomTableViewCell.swift */,
+				D532CADF2A1E9C6E00B47387 /* NewPlacesTableViewController.swift */,
 				D519001F2A02D45400F24455 /* SceneDelegate.swift */,
 				D51900312A02D4C200F24455 /* TableViewController.swift */,
 				D51900212A02D45400F24455 /* ViewController.swift */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D51900222A02D45400F24455 /* ViewController.swift in Sources */,
+				D532CAE02A1E9C6E00B47387 /* NewPlacesTableViewController.swift in Sources */,
 				D532CADC2A06E84700B47387 /* CustomTableViewCell.swift in Sources */,
 				D519001E2A02D45400F24455 /* AppDelegate.swift in Sources */,
 				D532CADE2A06F17B00B47387 /* Model.swift in Sources */,
